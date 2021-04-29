@@ -3,19 +3,18 @@
 #include<climits>
 using namespace std;
 
-long long int pow(int b, long long int e)
-{
-    if(e==1)
-        return b;
-    static int i=0;
-    long int ans=0
-    for (; i<e;i++)
-    
-}
+
 int main()
 {   
-    long long int n;
+    unsigned long long int n;
     cin>>n;
-    cout<<pow(2,n));
+    unsigned long long int res=1;
+    unsigned long long int x=1000000007;
+    for(int i=0;i<n;i++)
+    {
+        res *= 2;
+        res = (res)%x;
+    }
+    cout<<res;
     return 0;   
 }
